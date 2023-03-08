@@ -168,6 +168,7 @@ class MealBean(c: Context) {
 
 	fun isAddUsereatsMealError(): Boolean {
 		errors.clear()
+		//if statement
 		return errors.size > 0
 	}
 
