@@ -66,23 +66,11 @@ class MealCRUDViewModel constructor(context: Context): ViewModel() {
             val itemx = Meal.createByPKMeal(value)
             if (meal.isNotEmpty()) {
             itemx.mealId = meal[0].mealId
-            }
-            if (meal.isNotEmpty()) {
             itemx.mealName = meal[0].mealName
-            }
-            if (meal.isNotEmpty()) {
             itemx.calories = meal[0].calories
-            }
-            if (meal.isNotEmpty()) {
             itemx.dates = meal[0].dates
-            }
-            if (meal.isNotEmpty()) {
             itemx.images = meal[0].images
-            }
-            if (meal.isNotEmpty()) {
             itemx.analysis = meal[0].analysis
-            }
-            if (meal.isNotEmpty()) {
             itemx.userName = meal[0].userName
             }
             itemx
