@@ -91,9 +91,9 @@ package com.example.dietpro
 				mealBean = MealBean(myContext)
 			editMealSpinner = root.findViewById(R.id.crudMealSpinner)
 	
-			model.allMealMealIds.observe( viewLifecycleOwner, androidx.lifecycle.Observer { Mealid ->
-				Mealid.let {
-				allMealmealIds = Mealid
+			model.allMealMealIds.observe( viewLifecycleOwner, androidx.lifecycle.Observer { mealId ->
+				mealId.let {
+				allMealmealIds = mealId
 				val editMealAdapter =
 				ArrayAdapter(myContext, android.R.layout.simple_spinner_item, allMealmealIds)
 				editMealAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
