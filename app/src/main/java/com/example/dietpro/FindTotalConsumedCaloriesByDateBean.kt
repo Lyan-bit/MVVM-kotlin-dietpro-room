@@ -55,7 +55,7 @@ else {
  	  errors.add("dates cannot be empty")
 }
 
-	    return errors.size > 0
+	    return errors.isNotEmpty()
 	}
 
     fun errors(): String {
