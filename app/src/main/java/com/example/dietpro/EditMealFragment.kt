@@ -334,13 +334,17 @@ package com.example.dietpro
 					ExifInterface.TAG_ORIENTATION,
 					ExifInterface.ORIENTATION_UNDEFINED
 				)
-				if (orientation == ExifInterface.ORIENTATION_ROTATE_90) {
+				when (orientation) {
+				ExifInterface.ORIENTATION_ROTATE_90 -> {
 					rotateImage(bitmap, 90f)
-				} else if (orientation == ExifInterface.ORIENTATION_ROTATE_180) {
+				}
+				ExifInterface.ORIENTATION_ROTATE_180 -> {
 					rotateImage(bitmap, 180f)
-				} else if (orientation == ExifInterface.ORIENTATION_ROTATE_270) {
+				}
+				ExifInterface.ORIENTATION_ROTATE_270 -> {
 					rotateImage(bitmap, 270f)
 				}
+			}
 			} catch (e: IOException) {
 				e.printStackTrace()
 			}
