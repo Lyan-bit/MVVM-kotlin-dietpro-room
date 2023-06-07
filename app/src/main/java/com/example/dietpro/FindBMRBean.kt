@@ -30,7 +30,7 @@ class FindBMRBean(c: Context) {
         }
         
 
-	    return errors.size > 0
+	    return errors.isNotEmpty()
 	}
 
     fun errors(): String {
