@@ -15,40 +15,50 @@ class PagerAdapter(private val mContext: Context, fm: FragmentManager) : Fragmen
         // instantiate a fragment for the page.
             return when (position) {
                  0 -> { 
-                    CreateProfileUserFragment.newInstance(mContext) 
+                    CreateMealFragment.newInstance(mContext)
                 }
                  1 -> { 
-                    ListUserFragment.newInstance(mContext) 
+                    ListMealFragment.newInstance(mContext)
                 }
                  2 -> { 
-                    CreateMealFragment.newInstance(mContext) 
+                    EditMealFragment.newInstance(mContext)
                 }
                  3 -> { 
-                    ListMealFragment.newInstance(mContext) 
+                    DeleteMealFragment.newInstance(mContext)
                 }
                  4 -> { 
-                    EditMealFragment.newInstance(mContext) 
+                    SearchMealByDatedatesFragment.newInstance(mContext)
                 }
                  5 -> { 
-                    DeleteMealFragment.newInstance(mContext) 
+                    CreateProfileUserFragment.newInstance(mContext)
                 }
                  6 -> { 
-                    SearchMealByDatedatesFragment.newInstance(mContext) 
+                    ListUserFragment.newInstance(mContext)
                 }
                  7 -> { 
-                    FindBmrFragment.newInstance(mContext) 
+                    FindTotalConsumedCaloriesByDateFragment.newInstance(mContext)
                 }
                  8 -> { 
-                    FindConsumedCaloriesFragment.newInstance(mContext) 
+                    FindTargetCaloriesFragment.newInstance(mContext)
                 }
                  9 -> { 
-                    FindProgressFragment.newInstance(mContext) 
+                    FindBMRFragment.newInstance(mContext)
                 }
                  10 -> { 
-                    RecogniseFoodFragment.newInstance(mContext) 
+                    CaloriesProgressFragment.newInstance(mContext)
+                }
+                11 -> {
+                    AddUsereatsMealFragment.newInstance(mContext)
+                }
+                12 -> {
+                    RemoveUsereatsMealFragment.newInstance(mContext)
+                }
+                13 -> {
+                    ImageRecognitionFragment.newInstance(mContext)
                 }
                 else -> CreateProfileUserFragment.newInstance(mContext) 
              }
+    }
 
     override fun getPageTitle(position: Int): CharSequence {
         return TABTITLES[position]
